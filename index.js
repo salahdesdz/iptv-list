@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const fsPromises = require("fs").promises;
 
 async function main() {
-  const response = await fetch("https://iptv-org.github.io/iptv/channels.json");
+  const response = await fetch("https://iptv-org.github.io/api/channels.json");
   if (response.status < 200 || response.status >= 300) {
     throw new Error("wrong status code");
   }
